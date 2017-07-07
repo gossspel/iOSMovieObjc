@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B26FCD51F0FFBC1008EF0A1 /* MOAFNetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B26FCD41F0FFBC1008EF0A1 /* MOAFNetworkingManager.m */; };
 		6BBFDFBB1F0FE2940055F745 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBFDFBA1F0FE2940055F745 /* main.m */; };
 		6BBFDFBE1F0FE2940055F745 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBFDFBD1F0FE2940055F745 /* AppDelegate.m */; };
 		6BBFDFC61F0FE2940055F745 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BBFDFC51F0FE2940055F745 /* Assets.xcassets */; };
@@ -35,6 +36,8 @@
 
 /* Begin PBXFileReference section */
 		66F9B9FE16F604C652D7CD5E /* Pods-iOSMovieObjc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSMovieObjc.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSMovieObjc/Pods-iOSMovieObjc.release.xcconfig"; sourceTree = "<group>"; };
+		6B26FCD31F0FFBC1008EF0A1 /* MOAFNetworkingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOAFNetworkingManager.h; sourceTree = "<group>"; };
+		6B26FCD41F0FFBC1008EF0A1 /* MOAFNetworkingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOAFNetworkingManager.m; sourceTree = "<group>"; };
 		6BBFDFB61F0FE2940055F745 /* iOSMovieObjc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSMovieObjc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BBFDFBA1F0FE2940055F745 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6BBFDFBC1F0FE2940055F745 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -137,6 +140,8 @@
 		6B132B0D1F0FF5BF00D629E5 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				6B26FCD31F0FFBC1008EF0A1 /* MOAFNetworkingManager.h */,
+				6B26FCD41F0FFBC1008EF0A1 /* MOAFNetworkingManager.m */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -419,6 +424,7 @@
 			files = (
 				6BBFDFBE1F0FE2940055F745 /* AppDelegate.m in Sources */,
 				6BBFDFBB1F0FE2940055F745 /* main.m in Sources */,
+				6B26FCD51F0FFBC1008EF0A1 /* MOAFNetworkingManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
