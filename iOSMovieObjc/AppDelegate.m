@@ -17,6 +17,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    // Disclaimer: The use of Objective c message sending syntax vs dot syntax is:
+    // 1.) Method calls are preferred in Objective C message sending syntax
+    // 2.) Properties are preferred in dot syntax.
+    // 3.) Above preferences are governed by Xcode suggestion in this project.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    UIViewController *hvc = [[UIViewController alloc] init];
+    hvc.view.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = hvc;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
