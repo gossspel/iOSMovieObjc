@@ -73,6 +73,76 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B132B061F0FEEEA00D629E5 /* Movies */ = {
+			isa = PBXGroup;
+			children = (
+				6B132B0A1F0FF04700D629E5 /* Service */,
+				6B132B091F0FF01F00D629E5 /* View */,
+				6B132B081F0FEFF800D629E5 /* ViewModel */,
+				6B132B071F0FEFC800D629E5 /* Model */,
+			);
+			name = Movies;
+			sourceTree = "<group>";
+		};
+		6B132B071F0FEFC800D629E5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		6B132B081F0FEFF800D629E5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		6B132B091F0FF01F00D629E5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		6B132B0A1F0FF04700D629E5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		6B132B0B1F0FF58D00D629E5 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				6B132B061F0FEEEA00D629E5 /* Movies */,
+			);
+			name = Feature;
+			sourceTree = "<group>";
+		};
+		6B132B0C1F0FF5A600D629E5 /* NonFeatureSpecific */ = {
+			isa = PBXGroup;
+			children = (
+				6B132B0E1F0FF5CC00D629E5 /* Client */,
+				6B132B0D1F0FF5BF00D629E5 /* Manager */,
+			);
+			name = NonFeatureSpecific;
+			sourceTree = "<group>";
+		};
+		6B132B0D1F0FF5BF00D629E5 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		6B132B0E1F0FF5CC00D629E5 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Client;
+			sourceTree = "<group>";
+		};
 		6BBFDFAD1F0FE2930055F745 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +166,8 @@
 		6BBFDFB81F0FE2940055F745 /* iOSMovieObjc */ = {
 			isa = PBXGroup;
 			children = (
+				6B132B0B1F0FF58D00D629E5 /* Feature */,
+				6B132B0C1F0FF5A600D629E5 /* NonFeatureSpecific */,
 				6BBFDFBC1F0FE2940055F745 /* AppDelegate.h */,
 				6BBFDFBD1F0FE2940055F745 /* AppDelegate.m */,
 				6BBFDFC51F0FE2940055F745 /* Assets.xcassets */,
