@@ -10,4 +10,6 @@
 
 @interface MOAFNetworkingManager : NSObject
 
+- (instancetype)init;
+
 @end
