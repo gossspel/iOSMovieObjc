@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MOAPIClient.h"
 
-@interface MOAFNetworkingManager : NSObject
+@interface MOAFNetworkingManager : NSObject <MOAPIClientProtocol>
 
 - (instancetype)init;
 
