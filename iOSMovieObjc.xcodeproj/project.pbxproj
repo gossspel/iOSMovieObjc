@@ -10,6 +10,7 @@
 		6B26FCD51F0FFBC1008EF0A1 /* MOAFNetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B26FCD41F0FFBC1008EF0A1 /* MOAFNetworkingManager.m */; };
 		6B317FCA1F129B5C009BFE2B /* MOAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B317FC91F129B5C009BFE2B /* MOAPIClient.m */; };
 		6B7B5E711F149986003819AE /* MovieModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B5E701F149986003819AE /* MovieModel.m */; };
+		6B9BB27D1F15226F0022D0E3 /* MovieDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9BB27C1F15226F0022D0E3 /* MovieDataService.m */; };
 		6BBFDFBB1F0FE2940055F745 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBFDFBA1F0FE2940055F745 /* main.m */; };
 		6BBFDFBE1F0FE2940055F745 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBFDFBD1F0FE2940055F745 /* AppDelegate.m */; };
 		6BBFDFC61F0FE2940055F745 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BBFDFC51F0FE2940055F745 /* Assets.xcassets */; };
@@ -44,6 +45,8 @@
 		6B317FC91F129B5C009BFE2B /* MOAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOAPIClient.m; sourceTree = "<group>"; };
 		6B7B5E6F1F149986003819AE /* MovieModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieModel.h; sourceTree = "<group>"; };
 		6B7B5E701F149986003819AE /* MovieModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieModel.m; sourceTree = "<group>"; };
+		6B9BB27B1F15226F0022D0E3 /* MovieDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDataService.h; sourceTree = "<group>"; };
+		6B9BB27C1F15226F0022D0E3 /* MovieDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDataService.m; sourceTree = "<group>"; };
 		6BBFDFB61F0FE2940055F745 /* iOSMovieObjc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSMovieObjc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BBFDFBA1F0FE2940055F745 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6BBFDFBC1F0FE2940055F745 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -124,6 +127,8 @@
 		6B132B0A1F0FF04700D629E5 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				6B9BB27B1F15226F0022D0E3 /* MovieDataService.h */,
+				6B9BB27C1F15226F0022D0E3 /* MovieDataService.m */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -432,6 +437,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B9BB27D1F15226F0022D0E3 /* MovieDataService.m in Sources */,
 				6BBFDFBE1F0FE2940055F745 /* AppDelegate.m in Sources */,
 				6B317FCA1F129B5C009BFE2B /* MOAPIClient.m in Sources */,
 				6BBFDFBB1F0FE2940055F745 /* main.m in Sources */,
