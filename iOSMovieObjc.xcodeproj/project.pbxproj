@@ -19,6 +19,7 @@
 		6BBFDFC91F0FE2940055F745 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BBFDFC71F0FE2940055F745 /* LaunchScreen.storyboard */; };
 		6BBFDFD41F0FE2940055F745 /* iOSMovieObjcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBFDFD31F0FE2940055F745 /* iOSMovieObjcTests.m */; };
 		6BBFDFDF1F0FE2940055F745 /* iOSMovieObjcUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBFDFDE1F0FE2940055F745 /* iOSMovieObjcUITests.m */; };
+		6BC0721F1F16B6AE006C6DDC /* MovieListVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC0721E1F16B6AE006C6DDC /* MovieListVM.m */; };
 		9CC12170D583D4BE5855B576 /* libPods-iOSMovieObjc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 939CB2097D6EB666919856D1 /* libPods-iOSMovieObjc.a */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,8 @@
 		6BBFDFDA1F0FE2940055F745 /* iOSMovieObjcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSMovieObjcUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BBFDFDE1F0FE2940055F745 /* iOSMovieObjcUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSMovieObjcUITests.m; sourceTree = "<group>"; };
 		6BBFDFE01F0FE2940055F745 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BC0721D1F16B6AE006C6DDC /* MovieListVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieListVM.h; sourceTree = "<group>"; };
+		6BC0721E1F16B6AE006C6DDC /* MovieListVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieListVM.m; sourceTree = "<group>"; };
 		939CB2097D6EB666919856D1 /* libPods-iOSMovieObjc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSMovieObjc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6450A8ECDE247E9BF112AF6 /* Pods-iOSMovieObjc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSMovieObjc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSMovieObjc/Pods-iOSMovieObjc.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,6 +122,8 @@
 		6B132B081F0FEFF800D629E5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				6BC0721D1F16B6AE006C6DDC /* MovieListVM.h */,
+				6BC0721E1F16B6AE006C6DDC /* MovieListVM.m */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -455,6 +460,7 @@
 				6B7B5E711F149986003819AE /* MovieModel.m in Sources */,
 				6B0CB4C01F1689CC00FEA5BE /* MovieListTVC.m in Sources */,
 				6B26FCD51F0FFBC1008EF0A1 /* MOAFNetworkingManager.m in Sources */,
+				6BC0721F1F16B6AE006C6DDC /* MovieListVM.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
