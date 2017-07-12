@@ -10,9 +10,15 @@
 
 @protocol MOAPIClientProtocol <NSObject>
 
-- (void) sendHTTPGETRequest:(NSString * _Nonnull)URLStr b:(NSDictionary * _Nullable)queryStringParameters c:(void (^ _Nullable)(NSURLResponse * _Nonnull, id _Nullable, NSError * _Nullable))completionHandler;
+- (void)sendHTTPGETRequestWithURLStr:(NSString * _Nonnull)URLStr
+                             headers:(NSDictionary<NSString *, NSString *> * _Nullable)headers
+                   queryStringParams:(NSDictionary<NSString *, NSString *> * _Nullable)queryStringParams
+                   completionHandler:(void (^ _Nullable)(NSURLResponse * _Nonnull, id _Nullable, NSError * _Nullable))completionHandler;
 
-- (void) sendHTTPPOSTRequest:(NSString * _Nonnull)URLStr b:(NSDictionary * _Nullable)URLFormParameters c:(void (^ _Nullable)(NSURLResponse * _Nonnull, id _Nullable, NSError * _Nullable))completionHandler;
+- (void)sendHTTPPOSTRequestWithURLStr:(NSString * _Nonnull)URLStr
+                              headers:(NSDictionary<NSString *, NSString *> * _Nullable)headers
+                        URLFormParams:(NSDictionary<NSString *, NSString *> * _Nullable)URLFormParams
+                    completionHandler:(void (^ _Nullable)(NSURLResponse * _Nonnull, id _Nullable, NSError * _Nullable))completionHandler;
 
 @end
 

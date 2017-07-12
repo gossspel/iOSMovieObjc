@@ -24,17 +24,38 @@
     return self;
 }
 
-- (void)sendHTTPGETRequest:(NSString *)URLStr b:(NSDictionary *)queryStringParameters c:(void (^)(NSURLResponse * _Nonnull, id _Nullable, NSError * _Nullable))completionHandler {
-    [self sendHTTPRequest:URLStr b:@"GET" c:queryStringParameters d:completionHandler];
+- (void)sendHTTPGETRequestWithURLStr:(NSString *)URLStr
+                             headers:(NSDictionary<NSString *,NSString *> *)headers
+                   queryStringParams:(NSDictionary<NSString *,NSString *> *)queryStringParams
+                   completionHandler:(void (^)(NSURLResponse * _Nonnull, id _Nullable, NSError * _Nullable))completionHandler
+{
+    [self sendHTTPRequestWith_:URLStr HTTPVerb:@"GET" headers:headers params:queryStringParams completionHandler:completionHandler];
 }
 
-- (void)sendHTTPPOSTRequest:(NSString *)URLStr b:(NSDictionary *)URLFormParameters c:(void (^)(NSURLResponse * _Nonnull, id _Nullable, NSError * _Nullable))completionHandler {
-    [self sendHTTPRequest:URLStr b:@"POST" c:URLFormParameters d:completionHandler];
+- (void)sendHTTPPOSTRequestWithURLStr:(NSString *)URLStr
+                              headers:(NSDictionary<NSString *,NSString *> *)headers
+                        URLFormParams:(NSDictionary<NSString *,NSString *> *)URLFormParams
+                    completionHandler:(void (^)(NSURLResponse * _Nonnull, id _Nullable, NSError * _Nullable))completionHandler
+{
+    [self sendHTTPRequestWith_:URLStr HTTPVerb:@"POST" headers:headers params:URLFormParams completionHandler:completionHandler];
 }
 
-- (void)sendHTTPRequest:(NSString * _Nonnull)URLStr b:(NSString * _Nonnull)HTTPVerbStr c:(NSDictionary * _Nullable)params d:(void (^ _Nullable)(NSURLResponse * _Nonnull, id _Nullable, NSError * _Nullable))completionHandler {
+- (void)sendHTTPRequestWith_:(NSString * _Nonnull)URLStr
+                    HTTPVerb:(NSString * _Nonnull)HTTPVerb
+                     headers:(NSDictionary<NSString *, NSString *> * _Nullable)headers
+                      params:(NSDictionary<NSString *, NSString *> * _Nullable)params
+           completionHandler:(void (^ _Nullable)(NSURLResponse * _Nonnull, id _Nullable, NSError * _Nullable))completionHandler
+{
     AFHTTPRequestSerializer *serializer = [AFHTTPRequestSerializer serializer];
-    NSURLRequest *request = [serializer requestWithMethod:HTTPVerbStr URLString:URLStr parameters:params error:nil];
+    
+    if (headers) {
+        for (NSString *key in headers) {
+            NSString *value = [headers objectForKey:key];
+            [serializer setValue:value forHTTPHeaderField:key];
+        }
+    }
+    
+    NSURLRequest *request = [serializer requestWithMethod:HTTPVerb URLString:URLStr parameters:params error:nil];
 
     if (request) {
         NSURLSessionDataTask *dataTask = [self.sessionManager dataTaskWithRequest:request completionHandler:completionHandler];

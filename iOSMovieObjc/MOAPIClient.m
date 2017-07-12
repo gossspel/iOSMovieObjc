@@ -12,6 +12,7 @@
 @interface MOAPIClient ()
 
 @property (nonatomic, strong, nonnull) NSObject <MOAPIClientProtocol> *networkingManager;
+@property (nonatomic, strong, nonnull) NSString *apiKey;
 
 @end
 
@@ -22,16 +23,29 @@
     
     // Note: we can swap manager here in the future.
     self.networkingManager = [[MOAFNetworkingManager alloc] init];
+    self.apiKey = @"a07e22bc18f5cb106bfe4cc1f83ad8ed";
     
     return self;
 }
 
-- (void)sendHTTPGETRequest:(NSString *)URLStr b:(NSDictionary *)queryStringParameters c:(void (^)(NSURLResponse * _Nonnull, id _Nullable, NSError * _Nullable))completionHandler {
-    [self.networkingManager sendHTTPGETRequest:URLStr b:queryStringParameters c:completionHandler];
+//- (NSMutableDictionary *)getUpdatedParams
+
+- (void)sendHTTPGETRequestWithURLStr:(NSString *)URLStr
+                             headers:(NSDictionary<NSString *,NSString *> *)headers
+                   queryStringParams:(NSDictionary<NSString *,NSString *> *)queryStringParams
+                   completionHandler:(void (^)(NSURLResponse * _Nonnull, id _Nullable, NSError * _Nullable))completionHandler
+{
+    // TODO: add apiKey
+    [self.networkingManager sendHTTPGETRequestWithURLStr:URLStr headers:headers queryStringParams:queryStringParams completionHandler:completionHandler];
 }
 
-- (void)sendHTTPPOSTRequest:(NSString *)URLStr b:(NSDictionary *)URLFormParameters c:(void (^)(NSURLResponse * _Nonnull, id _Nullable, NSError * _Nullable))completionHandler {
-    [self.networkingManager sendHTTPPOSTRequest:URLStr b:URLFormParameters c:completionHandler];
+- (void)sendHTTPPOSTRequestWithURLStr:(NSString *)URLStr
+                              headers:(NSDictionary<NSString *,NSString *> *)headers
+                        URLFormParams:(NSDictionary<NSString *,NSString *> *)URLFormParams
+                    completionHandler:(void (^)(NSURLResponse * _Nonnull, id _Nullable, NSError * _Nullable))completionHandler
+{
+    // TODO: add apiKey
+    [self.networkingManager sendHTTPPOSTRequestWithURLStr:URLStr headers:headers URLFormParams:URLFormParams completionHandler:completionHandler];
 }
 
 @end
