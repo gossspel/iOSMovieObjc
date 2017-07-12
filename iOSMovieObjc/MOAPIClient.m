@@ -28,15 +28,14 @@
     return self;
 }
 
-//- (NSMutableDictionary *)getUpdatedParams
-
 - (void)sendHTTPGETRequestWithURLStr:(NSString *)URLStr
                              headers:(NSDictionary<NSString *,NSString *> *)headers
                    queryStringParams:(NSDictionary<NSString *,NSString *> *)queryStringParams
                    completionHandler:(void (^)(NSURLResponse * _Nonnull, id _Nullable, NSError * _Nullable))completionHandler
 {
-    // TODO: add apiKey
-    [self.networkingManager sendHTTPGETRequestWithURLStr:URLStr headers:headers queryStringParams:queryStringParams completionHandler:completionHandler];
+    NSMutableDictionary<NSString *, NSString *> *params = [[NSMutableDictionary alloc] initWithDictionary:queryStringParams];
+    params[@"api_key"] = self.apiKey;
+    [self.networkingManager sendHTTPGETRequestWithURLStr:URLStr headers:headers queryStringParams:params completionHandler:completionHandler];
 }
 
 - (void)sendHTTPPOSTRequestWithURLStr:(NSString *)URLStr
