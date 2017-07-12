@@ -10,6 +10,7 @@
 		6B0CB4C01F1689CC00FEA5BE /* MovieListTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0CB4BF1F1689CC00FEA5BE /* MovieListTVC.m */; };
 		6B26FCD51F0FFBC1008EF0A1 /* MOAFNetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B26FCD41F0FFBC1008EF0A1 /* MOAFNetworkingManager.m */; };
 		6B317FCA1F129B5C009BFE2B /* MOAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B317FC91F129B5C009BFE2B /* MOAPIClient.m */; };
+		6B60DD081F168F86005DC214 /* MovieTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B60DD071F168F86005DC214 /* MovieTableCell.m */; };
 		6B7B5E711F149986003819AE /* MovieModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B5E701F149986003819AE /* MovieModel.m */; };
 		6B9BB27D1F15226F0022D0E3 /* MovieDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9BB27C1F15226F0022D0E3 /* MovieDataService.m */; };
 		6BBFDFBB1F0FE2940055F745 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBFDFBA1F0FE2940055F745 /* main.m */; };
@@ -46,6 +47,8 @@
 		6B26FCD41F0FFBC1008EF0A1 /* MOAFNetworkingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOAFNetworkingManager.m; sourceTree = "<group>"; };
 		6B317FC81F129B5C009BFE2B /* MOAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOAPIClient.h; sourceTree = "<group>"; };
 		6B317FC91F129B5C009BFE2B /* MOAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOAPIClient.m; sourceTree = "<group>"; };
+		6B60DD061F168F86005DC214 /* MovieTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieTableCell.h; sourceTree = "<group>"; };
+		6B60DD071F168F86005DC214 /* MovieTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieTableCell.m; sourceTree = "<group>"; };
 		6B7B5E6F1F149986003819AE /* MovieModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieModel.h; sourceTree = "<group>"; };
 		6B7B5E701F149986003819AE /* MovieModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieModel.m; sourceTree = "<group>"; };
 		6B9BB27B1F15226F0022D0E3 /* MovieDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDataService.h; sourceTree = "<group>"; };
@@ -125,6 +128,8 @@
 			children = (
 				6B0CB4BE1F1689CC00FEA5BE /* MovieListTVC.h */,
 				6B0CB4BF1F1689CC00FEA5BE /* MovieListTVC.m */,
+				6B60DD061F168F86005DC214 /* MovieTableCell.h */,
+				6B60DD071F168F86005DC214 /* MovieTableCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -445,6 +450,7 @@
 				6B9BB27D1F15226F0022D0E3 /* MovieDataService.m in Sources */,
 				6BBFDFBE1F0FE2940055F745 /* AppDelegate.m in Sources */,
 				6B317FCA1F129B5C009BFE2B /* MOAPIClient.m in Sources */,
+				6B60DD081F168F86005DC214 /* MovieTableCell.m in Sources */,
 				6BBFDFBB1F0FE2940055F745 /* main.m in Sources */,
 				6B7B5E711F149986003819AE /* MovieModel.m in Sources */,
 				6B0CB4C01F1689CC00FEA5BE /* MovieListTVC.m in Sources */,
