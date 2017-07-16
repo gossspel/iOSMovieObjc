@@ -7,6 +7,7 @@
 //
 
 #import "MovieTableCell.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface MovieTableCell ()
 
@@ -132,6 +133,18 @@
         } else {
             self.overviewLabel.text = initialValue;
         }
+    }
+    
+    if ([keyPath isEqualToString:@"imageURLStr"]) {
+        NSString *initialValue = [change valueForKey:NSKeyValueChangeNotificationIsPriorKey];
+        NSString *newValue = [change valueForKey:NSKeyValueChangeNewKey];
+        
+        if (newValue != nil) {
+            [self.posterImageView sd_setImageWithURL:[NSURL URLWithString:newValue]];
+        } else {
+            [self.posterImageView sd_setImageWithURL:[NSURL URLWithString:initialValue]];
+        }
+    
     }
 }
 

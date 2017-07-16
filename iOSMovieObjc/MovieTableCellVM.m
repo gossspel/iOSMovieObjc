@@ -10,6 +10,7 @@
 
 @implementation MovieTableCellVM
 
+NSString *const BASE_URL = @"https://image.tmdb.org/t/p/w185/%@";
 
 - (instancetype)initWithMovie:(MovieModel *)movie {
     self = [super init];
@@ -17,7 +18,7 @@
     if (self) {
         self.titleLabelText = movie.title;
         self.overviewLabelText = movie.overview;
-        self.imageURLStr = movie.posterPath;
+        self.imageURLStr = [NSString stringWithFormat:BASE_URL, movie.posterPath];
     }
     
     return self;
