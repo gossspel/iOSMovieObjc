@@ -49,7 +49,7 @@
                                              views:views];
     
     NSArray *titleToOverviewVConstraints = [NSLayoutConstraint
-                                            constraintsWithVisualFormat:@"V:|-[_titleLabel][_overviewLabel]-|"
+                                            constraintsWithVisualFormat:@"V:|-[_titleLabel(21)][_overviewLabel]-|"
                                             options:0
                                             metrics:nil
                                             views:views];
