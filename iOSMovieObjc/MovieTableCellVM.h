@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MovieModel.h"
 
 @interface MovieTableCellVM : NSObject
+
+@property (nonatomic, strong) NSString *titleLabelText;
+@property (nonatomic, strong) NSString *overviewLabelText;
+@property (nonatomic, strong) NSString *imageURLStr;
+
+- (instancetype)initWithMovie:(MovieModel *)movie;
 
 @end

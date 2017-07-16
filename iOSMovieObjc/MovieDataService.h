@@ -18,7 +18,6 @@ typedef NS_ENUM(NSUInteger, MovieDataServiceType) {
 @interface MovieDataService : NSObject
 
 - (instancetype _Nonnull)initWith:(MovieDataServiceType)serviceType;
-- (void)getListWithPage:(NSInteger)page
-      completionHandler:(void (^ _Nullable)(NSURLResponse * _Nonnull, id _Nullable, NSError * _Nullable))completionHandler;
+- (void)getListWithPage:(NSInteger)page successHandler:(void (^ _Nullable)(NSArray * _Nonnull))successHandler; // NSArray<MovieModel *>*
 
 @end

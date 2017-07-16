@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MovieDataService.h"
 
 @interface MovieListVM : NSObject
+
+@property (nonatomic, strong) NSString *cellReuseID;
+@property (nonatomic, strong) NSMutableArray *movieTableCellVMs;
+@property (nonatomic, assign) BOOL movieTableCellVMsUpdated;
+
+- (instancetype)initWithServiceType:(MovieDataServiceType)serviceType;
 
 @end

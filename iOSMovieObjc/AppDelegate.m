@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MovieListTVC.h"
 
 @interface AppDelegate ()
 
@@ -23,7 +24,7 @@
     // 3.) Above preferences are governed by Xcode suggestion in this project.
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    UIViewController *hvc = [[UIViewController alloc] init];
+    MovieListTVC *hvc = [[MovieListTVC alloc] initWithServiceType:now_playing];
     hvc.view.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = hvc;
     [self.window makeKeyAndVisible];

@@ -20,12 +20,12 @@
         self.overview = initDict[@"overview"];
     }
     
-    if ([initDict objectForKey:@"posterPath"]) {
-        self.posterPath = initDict[@"posterPath"];
+    if ([initDict objectForKey:@"poster_path"]) {
+        self.posterPath = initDict[@"poster_path"];
     }
     
-    if ([initDict objectForKey:@"releaseDate"]) {
-        self.releaseDate = initDict[@"releaseDate"];
+    if ([initDict objectForKey:@"release_date"]) {
+        self.releaseDate = initDict[@"release_date"];
     }
     
     return self;

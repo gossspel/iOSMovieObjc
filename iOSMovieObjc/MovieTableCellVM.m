@@ -10,4 +10,17 @@
 
 @implementation MovieTableCellVM
 
+
+- (instancetype)initWithMovie:(MovieModel *)movie {
+    self = [super init];
+    
+    if (self) {
+        self.titleLabelText = movie.title;
+        self.overviewLabelText = movie.overview;
+        self.imageURLStr = movie.posterPath;
+    }
+    
+    return self;
+}
+
 @end

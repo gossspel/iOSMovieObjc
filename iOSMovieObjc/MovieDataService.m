@@ -7,6 +7,7 @@
 //
 
 #import "MovieDataService.h"
+#import "MovieModel.h"
 #import "MOAPIClient.h"
 
 @interface MovieDataService ()
@@ -52,6 +53,27 @@
 {
     NSDictionary<NSString *, NSString *> *params = @{@"page": [@(page) stringValue]};
     [self.apiClient sendHTTPGETRequestWithURLStr:self.URLStr headers:nil queryStringParams:params completionHandler:completionHandler];
+}
+
+- (void)getListWithPage:(NSInteger)page successHandler:(void (^)(NSArray * _Nonnull))successHandler {
+    NSDictionary<NSString *, NSString *> *params = @{@"page": [@(page) stringValue]};
+    [self.apiClient
+     sendHTTPGETRequestWithURLStr:self.URLStr
+     headers:nil queryStringParams:params
+     completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+         if ([responseObject isKindOfClass:[NSDictionary class]]) {
+             NSDictionary *responseDict = responseObject;
+             NSArray *movieDicts = responseDict[@"results"];
+             NSMutableArray *movies = [[NSMutableArray alloc] init];
+             
+             for (NSDictionary *movieDict in movieDicts) {
+                 MovieModel *movie = [[MovieModel alloc] initWith:movieDict];
+                 [movies addObject:movie];
+             }
+             
+             successHandler(movies);
+         }
+     }];
 }
 
 @end

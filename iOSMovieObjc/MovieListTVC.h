@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MovieDataService.h"
 
 @interface MovieListTVC : UITableViewController
+
+- (instancetype)initWithServiceType:(MovieDataServiceType)serviceType;
 
 @end
