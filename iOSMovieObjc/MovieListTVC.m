@@ -38,12 +38,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self addKVO];
+    self.tableView.estimatedRowHeight = 100;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+}
+
+- (void)dealloc {
+    [self removeKVO];
+}
+
+#pragma mark - KVO
+- (void)addKVO {
     NSKeyValueObservingOptions options = NSKeyValueObservingOptionInitial|NSKeyValueObservingOptionNew;
     [self.VM addObserver:self forKeyPath:@"movieTableCellVMsUpdated" options:options context:nil];
 }
 
-- (void)dealloc {
-    // TODO: add observer removal
+- (void)removeKVO {
     [self.VM removeObserver:self forKeyPath:@"movieTableCellVMsUpdated"];
 }
 
@@ -85,10 +95,6 @@
     [cellVM removeObserver:customCell forKeyPath:@"titleLabelText"];
     [cellVM removeObserver:customCell forKeyPath:@"overviewLabelText"];
     [cellVM removeObserver:customCell forKeyPath:@"imageURLStr"];
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 60;
 }
 
 @end
