@@ -343,7 +343,6 @@
 				TargetAttributes = {
 					6BBFDFB51F0FE2930055F745 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 889868CA9D;
 						ProvisioningStyle = Automatic;
 					};
 					6BBFDFCE1F0FE2940055F745 = {
@@ -614,7 +613,7 @@
 			baseConfigurationReference = E6450A8ECDE247E9BF112AF6 /* Pods-iOSMovieObjc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 889868CA9D;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = iOSMovieObjc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sunnystudio.iOSMovieObjc;
@@ -627,7 +626,7 @@
 			baseConfigurationReference = 66F9B9FE16F604C652D7CD5E /* Pods-iOSMovieObjc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 889868CA9D;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = iOSMovieObjc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sunnystudio.iOSMovieObjc;
